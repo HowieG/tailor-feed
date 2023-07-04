@@ -9,7 +9,7 @@ import SourceProductContainer from "./SourceProductContainer";
 
 const MainContainer = () => {
   return (
-    <div className="mt-4 flex min-h-screen w-full flex-col items-center justify-center gap-6 bg-red-500">
+    <div className="mt-4 flex min-h-screen w-full flex-col gap-6 bg-red-500">
       {testProducts.map((product, index) => (
         <TailoredResultContainer
           data={product}
@@ -22,7 +22,7 @@ const MainContainer = () => {
 
 const TailoredResultContainer = ({ data }: { data: TailorResult }) => {
   return (
-    <div className="flex h-full w-full flex-row items-center justify-center bg-blue-500 p-2">
+    <div className="flex h-full w-full flex-row gap-6 bg-blue-500 p-2">
       <ReferenceProductContainer
         data={data.referenceProduct}
       ></ReferenceProductContainer>
@@ -33,7 +33,7 @@ const TailoredResultContainer = ({ data }: { data: TailorResult }) => {
 
 const ReferenceProductContainer = ({ data }: { data: ReferenceProduct }) => {
   return (
-    <div className="flex h-full w-1/5 flex-col items-center justify-center bg-green-500">
+    <div className="flex h-full w-1/5 flex-col bg-green-500 px-6">
       <SourceProductContainer data={data} />
     </div>
   );

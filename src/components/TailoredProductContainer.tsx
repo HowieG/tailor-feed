@@ -67,16 +67,15 @@ export default function TailoredProductContainer({
       <Masonry columns={4} spacing={2}>
         {data.map((item, index) => (
           <div key={index}>
-            <img
-              src={`${item.product.imgUrl}?w=162&auto=format`}
-              srcSet={`${item.product.imgUrl}?w=162&auto=format&dpr=2 2x`}
+            <Image
+              src={item.product.imgUrl}
+              alt="Alt Text"
               loading="lazy"
-              style={{
-                borderBottomLeftRadius: 4,
-                borderBottomRightRadius: 4,
-                display: "block",
-                width: "100%",
-              }}
+              style={imageStyles}
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="h-auto w-full"
             />
             <Label>{index + 1}</Label>
           </div>

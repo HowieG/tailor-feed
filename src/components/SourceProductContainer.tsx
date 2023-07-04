@@ -64,16 +64,15 @@ export default function SourceProductContainer({
 }) {
   return (
     <Box>
-      <img
-        src={`${data.product.imgUrl}?w=162&auto=format`}
-        srcSet={`${data.product.imgUrl}?w=162&auto=format&dpr=2 2x`}
+      <Image
+        src={data.product.imgUrl}
+        alt="Alt Text"
         loading="lazy"
-        style={{
-          borderBottomLeftRadius: 4,
-          borderBottomRightRadius: 4,
-          display: "block",
-          width: "100%",
-        }}
+        style={imageStyles}
+        width="0"
+        height="0"
+        sizes="100vw"
+        className="h-auto w-full"
       />
       <Label>{data.product.description}</Label>
     </Box>
