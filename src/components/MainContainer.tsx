@@ -11,7 +11,7 @@ const MainContainer = () => {
 
 const TailoredResultContainer = () => {
   return (
-    <div className="flex h-96 w-full flex-row items-center justify-center bg-blue-500 p-2">
+    <div className="flex h-full w-full flex-row items-center justify-center bg-blue-500 p-2">
       <SourceProductContainer></SourceProductContainer>
       <TailoredResults></TailoredResults>
     </div>
@@ -25,7 +25,7 @@ const SourceProductContainer = () => {
 };
 const TailoredResults = () => {
   return (
-    <div className="flex h-full w-4/5 flex-col items-center justify-center bg-yellow-500">
+    <div className="flex h-full w-4/5 flex-col justify-center bg-yellow-500">
       <ProductContainer></ProductContainer>
     </div>
   );
