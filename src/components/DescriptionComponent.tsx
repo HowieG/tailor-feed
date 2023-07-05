@@ -14,7 +14,7 @@ export default function DescriptionComponent({
   descriptionTokens: DescriptionToken[];
 }) {
   return (
-    <div className="my-1 grid grid-cols-4 gap-0.5">
+    <div className="my-1 grid grid-cols-4 gap-1">
       {descriptionTokens.map((descriptionToken, index) => (
         <div
           key={index}

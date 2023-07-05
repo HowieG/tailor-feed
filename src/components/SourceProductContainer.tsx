@@ -33,17 +33,23 @@ export default function SourceProductContainer({
   data: ReferenceProduct;
 }) {
   return (
-    <Box className="rounded-lg bg-tailorTan-200 p-6">
-      <Image
-        src={data.product.imgUrl}
-        alt="Alt Text"
-        loading="lazy"
-        style={imageStyles}
-        width="0"
-        height="0"
-        sizes="100vw"
-        className="h-auto w-full"
-      />
+    <Box className="rounded-2xl bg-tailorTan-200 px-3 py-2 shadow-2xl">
+      <a
+        href={data.product.sourceUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src={data.product.imgUrl}
+          alt="Tailored Result"
+          loading="lazy"
+          style={imageStyles}
+          width="0"
+          height="0"
+          sizes="100vw"
+          className="h-auto w-full"
+        />
+      </a>
       <DescriptionComponent
         descriptionTokens={stringToDescriptionTokenArray(testDescriptionTokens)}
       />

@@ -11,24 +11,32 @@ const stripedCouches: TailoredProduct[] = [
     product: {
       imgUrl:
         "https://cdn.shopify.com/s/files/1/0520/4384/1704/files/operose-sofa-mademoiselle-home-decor-and-furniture-store-3_800x.jpg?v=1687837945",
+      sourceUrl:
+        "https://www.aliexpress.com/i/3256803227620457.html?gatewayAdapt=4itemAdapt",
     },
   },
   {
     product: {
       imgUrl:
         "https://img5.su-cdn.com/cdn-cgi/image/width=600,height=600,format=webp/mall/file/2022/10/27/8b96f67285eda64942f611f1bdbe216f.jpg",
+      sourceUrl:
+        "https://www.homary.com/item/866-modern-white-velvet-3seater-sofa-channel-tufted-upholstered-luxury-solid-wood-44176.html",
     },
   },
   {
     product: {
       imgUrl:
         "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSvF932PWEdFFrCxzYlBROczBZ5ee0j3uIkCiZKi5zM6AvW43FshzCkd5Rlz-Hd0_KcWtX0Whp9llmvVxDnqU_64ekJGW7wMA&usqp=CAY",
+      sourceUrl:
+        "https://www.westelm.com/shop/furniture/canvas+sofas/material-m-material-ff0011-1/",
     },
   },
   {
     product: {
       imgUrl:
         "https://cdn.shopify.com/s/files/1/0520/4384/1704/files/operose-chair-mademoiselle-home-decor-and-furniture-store-3_800x.jpg?v=1687823657",
+      sourceUrl:
+        "https://www.amazon.com/YQSYWYN-Pumpkin-Bedroom-Balcony-Leisure/dp/B09W9HGCQZ?th=1",
     },
   },
   {
@@ -40,19 +48,19 @@ const stripedCouches: TailoredProduct[] = [
   {
     product: {
       imgUrl:
-        "https://www.interiortonic.com/cdn/shop/products/IMG_1778_5000x.jpg?v=1671611711",
-    },
-  },
-  {
-    product: {
-      imgUrl:
-        "https://a.1stdibscdn.com/studio-sofa-by-norr11-modular-sofa-setup-1-grey-for-sale-picture-3/f_31233/f_268961321642093010550/210907_norr11_Morten_Bentzon_22792_master.jpg?disable=upscale&auto=webp&quality=60&width=1400",
+        "https://a.1stdibscdn.com/customizable-norr11-studio-sofa-setup1-by-kristian-sofus-hansen-tommy-hyldahl-for-sale-picture-8/f_44652/f_298347921659461435258/220709_NORR11_CONTENT47461_master.jpg?disable=upscale&auto=webp&quality=60&width=1400",
     },
   },
   {
     product: {
       imgUrl:
         "https://www.futureclassicsfurniture.com.au/cdn/shop/products/marshmellow_chair_1080x.png?v=1619059382",
+    },
+  },
+  {
+    product: {
+      imgUrl:
+        "https://a.1stdibscdn.com/studio-sofa-by-norr11-modular-sofa-setup-1-grey-for-sale-picture-3/f_31233/f_268961321642093010550/210907_norr11_Morten_Bentzon_22792_master.jpg?disable=upscale&auto=webp&quality=60&width=1400",
     },
   },
   {
@@ -82,7 +90,7 @@ const stripedCouches: TailoredProduct[] = [
   {
     product: {
       imgUrl:
-        "https://a.1stdibscdn.com/customizable-norr11-studio-sofa-setup1-by-kristian-sofus-hansen-tommy-hyldahl-for-sale-picture-8/f_44652/f_298347921659461435258/220709_NORR11_CONTENT47461_master.jpg?disable=upscale&auto=webp&quality=60&width=1400",
+        "https://www.interiortonic.com/cdn/shop/products/IMG_1778_5000x.jpg?v=1671611711",
     },
   },
   {

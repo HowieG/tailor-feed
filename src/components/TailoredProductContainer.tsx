@@ -6,6 +6,7 @@ import type { TailoredProduct } from "~/types/TailorTypes";
 import { stringToDescriptionTokenArray } from "~/utils";
 import { testDescriptionTokens } from "~/data/test-data";
 import DescriptionComponent from "./DescriptionComponent";
+import { useRouter } from "next/router";
 
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
@@ -35,10 +36,19 @@ export default function TailoredProductContainer({
   useEffect(() => {
     const timer = setTimeout(() => {
       setExpanded(false);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const router = useRouter();
+
+  const handleImageClick = (url: string) => {
+    router.push(url).catch((error) => {
+      // Handle error if any
+      console.error("Error navigating to the URL:", error);
+    });
+  };
 
   return (
     <Box>
@@ -66,6 +76,11 @@ export default function TailoredProductContainer({
                   height="0"
                   sizes="100vw"
                   className="h-auto w-full"
+                  onClick={() =>
+                    handleImageClick(
+                      item.product.sourceUrl ? item.product.sourceUrl : "/"
+                    )
+                  }
                 />
               </AccordionSummary>
               <AccordionDetails>
@@ -100,7 +115,7 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  padding: 0,
+  padding: 4,
 }));
 
 // const Wrapper = () => {
