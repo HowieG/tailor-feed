@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Input } from "~/components/ui/input";
 import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import BaseHeader from "./BaseHeader";
 
 const headerWrapperStyles = {
   position: "sticky" as const,
@@ -61,7 +62,6 @@ const ExploreButton = () => {
       style={{
         display: "flex",
         padding: "12px",
-        margin: "0 12px",
         border: "none",
         borderRadius: "24px",
         backgroundColor: "#fff",
@@ -69,7 +69,6 @@ const ExploreButton = () => {
         fontSize: "14px",
         fontWeight: "bold",
         cursor: "pointer",
-        alignItems: "center",
       }}
     >
       Explore
@@ -79,11 +78,8 @@ const ExploreButton = () => {
 
 function Header() {
   return (
-    <HeaderWrapper>
-      <div className="flex h-full items-center">
-        <LogoWrapper />
-        <ExploreButton />
-      </div>
+    <BaseHeader>
+      <ExploreButton />
       <div className="flex-grow">
         <Input className="w-3/4 rounded-full" placeholder="Search..."></Input>
       </div>
@@ -91,7 +87,7 @@ function Header() {
         <CircleNotificationsIcon style={{ fontSize: "48px" }} />
         <AccountCircleIcon style={{ fontSize: "48px" }} />
       </div>
-    </HeaderWrapper>
+    </BaseHeader>
   );
 }
 

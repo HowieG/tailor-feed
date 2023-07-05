@@ -89,24 +89,6 @@ const chairsWithNoArmrest: TailoredProduct[] = [
       ],
     },
   },
-  {
-    product: {
-      imgUrl:
-        "https://d9dvmj2a7k2dc.cloudfront.net/catalog/product/t/o/tov_s68573_1_tov20231.jpg",
-      sourceUrl:
-        "https://colemanfurniture.com/slipper-light-grey-velvet-swivel-chair.htm",
-      description: [{ token: "TODO", sentiment: 0 }],
-    },
-  },
-  {
-    product: {
-      imgUrl:
-        "https://www.interiortonic.com/cdn/shop/products/IMG_1778_5000x.jpg?v=1671611711",
-      sourceUrl:
-        "https://designdistrictmodern.com/bellini-modular-sofa-left-armrest-chair-cream-white-boucle/",
-      description: [{ token: "TODO", sentiment: 0 }],
-    },
-  },
 ];
 
 const stripedCouches: TailoredProduct[] = [
@@ -274,6 +256,13 @@ export const testProducts: TailorResult[] = [
   {
     referenceProduct: referenceProduct3,
     tailoredProducts: bubbleCouches,
+  },
+];
+
+export const demo: TailorResult[] = [
+  {
+    referenceProduct: referenceProduct1,
+    tailoredProducts: chairsWithNoArmrest,
   },
 ];
 

@@ -1,11 +1,12 @@
 import Header from "~/components/Header";
 import MainContainer from "~/components/MainContainer";
+import { testProducts } from "~/data/test-data";
 
 export default function Home() {
   return (
     <main className="">
       <Header></Header>
-      <MainContainer></MainContainer>
+      <MainContainer data={testProducts}></MainContainer>
     </main>
   );
 }
