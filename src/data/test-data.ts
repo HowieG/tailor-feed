@@ -2,6 +2,8 @@ import type {
   TailoredProduct,
   ReferenceProduct,
   TailorResult,
+  Product,
+  DescriptionToken,
 } from "~/types/TailorTypes";
 
 const stripedCouches: TailoredProduct[] = [
@@ -45,12 +47,6 @@ const stripedCouches: TailoredProduct[] = [
     product: {
       imgUrl:
         "https://a.1stdibscdn.com/studio-sofa-by-norr11-modular-sofa-setup-1-grey-for-sale-picture-3/f_31233/f_268961321642093010550/210907_norr11_Morten_Bentzon_22792_master.jpg?disable=upscale&auto=webp&quality=60&width=1400",
-    },
-  },
-  {
-    product: {
-      imgUrl:
-        "https://assets.weimgs.com/weimgs/ab/images/wcm/products/202324/0143/img90xl.jpg",
     },
   },
   {
@@ -139,14 +135,14 @@ const bubbleCouches: TailoredProduct[] = [
 const referenceProduct1: ReferenceProduct = {
   product: {
     imgUrl:
-      "https://i.pinimg.com/originals/e0/5e/a7/e05ea72296215a1e91a753b5bd271262.jpg",
+      "https://i.pinimg.com/originals/ca/fd/3c/cafd3c29f246f07f5985217636a8f8a0.png",
   },
 };
 
 const referenceProduct2: ReferenceProduct = {
   product: {
     imgUrl:
-      "https://i.pinimg.com/originals/ca/fd/3c/cafd3c29f246f07f5985217636a8f8a0.png",
+      "https://i.pinimg.com/originals/e0/5e/a7/e05ea72296215a1e91a753b5bd271262.jpg",
   },
 };
 
@@ -160,3 +156,6 @@ export const testProducts: TailorResult[] = [
     tailoredProducts: bubbleCouches,
   },
 ];
+
+export const testDescriptionTokens =
+  "elongated couch sinuous lines ivory extruded design striped soft rounded forms modest simple design plush";

@@ -4,9 +4,10 @@ import { Input } from "~/components/ui/input";
 
 const headerWrapperStyles = {
   display: "flex",
+  gap: "6px",
   alignItems: "center",
   height: "60px",
-  padding: "12px 4px 4px 16px",
+  padding: "0px 4px 4px 16px",
   backgroundColor: "#e8d8c3",
   color: "#fff",
 };
@@ -40,8 +41,9 @@ const ExploreButton = () => {
     <button
       style={{
         display: "flex",
-        height: "48px",
-        padding: "0 16px",
+        height: "40px",
+        padding: "0 12px",
+        margin: "0 12px",
         border: "none",
         borderRadius: "24px",
         backgroundColor: "#fff",
@@ -65,7 +67,8 @@ function Header() {
         t<span style={{ color: "#bcd4bd" }}>ai</span>lor
       </h1>
       <ExploreButton />
-      <Input placeholder="Search..."></Input>
+      <Input className="w-1/2 rounded-full" placeholder="Search..."></Input>
+      <div className="ml-auto mr-4">Sign Out</div>
     </HeaderWrapper>
   );
 }
