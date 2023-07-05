@@ -19,7 +19,7 @@ const headerWrapperStyles = {
 };
 
 const logoStyles = {
-  color: "#fff",
+  color: "#D4BFA6",
   fontSize: "64px",
   fontFamily: "Ysabeau SC, sans-serif",
   fontWeight: "700",
