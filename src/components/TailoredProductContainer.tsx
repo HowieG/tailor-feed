@@ -29,15 +29,17 @@ export default function TailoredProductContainer({
 }) {
   const [expanded, setExpanded] = React.useState<string | boolean>(true);
 
-  //   useEffect(() => {
-  //     const timer = setTimeout(() => {
-  //       setExpanded(false);
-  //     }, 3000);
-
-  //     return () => clearTimeout(timer);
-  //   }, []);
-
   const router = useRouter();
+
+  useEffect(() => {
+    if (router.pathname !== "/signup") {
+      const timer = setTimeout(() => {
+        setExpanded(false);
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   const handleImageClick = (url: string) => {
     router.push(url).catch((error) => {
@@ -54,6 +56,16 @@ export default function TailoredProductContainer({
             <Accordion
               defaultExpanded={true}
               expanded={expanded == true || expanded === `panel${index + 1}`}
+              onMouseEnter={
+                router.pathname !== "/signup"
+                  ? () => setExpanded(`panel${index + 1}`)
+                  : undefined
+              }
+              onMouseLeave={
+                router.pathname !== "/signup"
+                  ? () => setExpanded(false)
+                  : undefined
+              }
               square // No idea how this fixes things but it does
               sx={{ borderRadius: "16px", background: "transparent" }} // TODO: Find somewhere more appropriate to put this
             >
@@ -70,12 +82,15 @@ export default function TailoredProductContainer({
                   height="0"
                   sizes="100vw"
                   className="h-auto w-full"
-                  onClick={() =>
-                    handleImageClick(
-                      tailoredProducts.product.sourceUrl
-                        ? tailoredProducts.product.sourceUrl
-                        : "/"
-                    )
+                  onClick={
+                    router.pathname !== "/signup"
+                      ? () =>
+                          handleImageClick(
+                            tailoredProducts.product.sourceUrl
+                              ? tailoredProducts.product.sourceUrl
+                              : "/"
+                          )
+                      : undefined
                   }
                 />
               </AccordionSummary>
