@@ -5,6 +5,9 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 import type { ReferenceProduct, Product } from "~/types/TailorTypes";
+import DescriptionComponent from "./DescriptionComponent";
+import { stringToDescriptionTokenArray } from "~/utils";
+import { testDescriptionTokens } from "~/data/test-data";
 
 const imageStyles = {
   display: "flex",
@@ -30,7 +33,7 @@ export default function SourceProductContainer({
   data: ReferenceProduct;
 }) {
   return (
-    <Box>
+    <Box className="rounded-lg bg-tailorTan-200 p-6">
       <Image
         src={data.product.imgUrl}
         alt="Alt Text"
@@ -41,7 +44,9 @@ export default function SourceProductContainer({
         sizes="100vw"
         className="h-auto w-full"
       />
-      <Label>{data.product.description}</Label>
+      <DescriptionComponent
+        descriptionTokens={stringToDescriptionTokenArray(testDescriptionTokens)}
+      />
     </Box>
   );
 }
