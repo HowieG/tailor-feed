@@ -5,6 +5,9 @@ import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const headerWrapperStyles = {
+  position: "sticky" as ConstrainULongRange,
+  top: 0,
+  zIndex: 999,
   display: "flex",
   justifyContent: "space-between",
   gap: "32px",
@@ -12,6 +15,7 @@ const headerWrapperStyles = {
   padding: "0 12px",
   backgroundColor: "#e8d8c3",
   color: "#fff",
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
 };
 
 const logoStyles = {

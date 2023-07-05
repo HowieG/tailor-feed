@@ -6,7 +6,6 @@ export default function Home() {
     <main className="">
       <Header></Header>
       <MainContainer></MainContainer>
-      {/* <Feed></Feed> */}
     </main>
   );
 }
