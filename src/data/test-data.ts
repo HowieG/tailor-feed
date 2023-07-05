@@ -31,23 +31,6 @@ const chairsWithNoArmrest: TailoredProduct[] = [
   },
   {
     product: {
-      imgUrl: "https://media.cymaxstores.com/Images/5102/2628551-L.jpg",
-      sourceUrl:
-        "https://www.homesquare.com/Meridian-Furniture-Swoon-Cream-Faux-Sheepskin-Accent-Chair-572Cream.htm?src=cpc&srcid=32187104",
-      description: [
-        { token: "chair", sentiment: 1 },
-        { token: "ivory", sentiment: 0.75 },
-        { token: "1970s", sentiment: 0 },
-        { token: "foampunk", sentiment: 0.25 },
-        { token: "textured", sentiment: 0 },
-        { token: "fabrics", sentiment: 0 },
-        { token: "modular", sentiment: 0 },
-        { token: "stipple", sentiment: 0 },
-      ],
-    },
-  },
-  {
-    product: {
       imgUrl:
         "https://cdn.shopify.com/s/files/1/0220/3498/products/TOV-S68128-1_5000x.jpg?v=1639904262",
       sourceUrl: "https://thelifestyledco.com/products/peche-lounge-chair",
@@ -86,6 +69,23 @@ const chairsWithNoArmrest: TailoredProduct[] = [
         { token: "extruded", sentiment: 1 },
         { token: "soft", sentiment: 0.75 },
         { token: "dreamy", sentiment: 0.25 },
+      ],
+    },
+  },
+  {
+    product: {
+      imgUrl: "https://media.cymaxstores.com/Images/5102/2628551-L.jpg",
+      sourceUrl:
+        "https://www.homesquare.com/Meridian-Furniture-Swoon-Cream-Faux-Sheepskin-Accent-Chair-572Cream.htm?src=cpc&srcid=32187104",
+      description: [
+        { token: "chair", sentiment: 1 },
+        { token: "ivory", sentiment: 0.75 },
+        { token: "1970s", sentiment: 0 },
+        { token: "foampunk", sentiment: 0.25 },
+        { token: "textured", sentiment: 0 },
+        { token: "fabrics", sentiment: 0 },
+        { token: "modular", sentiment: 0 },
+        { token: "stipple", sentiment: 0 },
       ],
     },
   },
