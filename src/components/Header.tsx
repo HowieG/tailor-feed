@@ -6,10 +6,17 @@ const headerWrapperStyles = {
   display: "flex",
   gap: "6px",
   alignItems: "center",
-  height: "60px",
-  padding: "0px 4px 4px 16px",
+  padding: "0 32px",
   backgroundColor: "#e8d8c3",
   color: "#fff",
+};
+
+const logoStyles = {
+  color: "#fff",
+  fontSize: "64px",
+  fontFamily: "Ysabeau SC, sans-serif",
+  fontWeight: "700",
+  margin: "-16px 0 0 0",
 };
 
 interface HeaderWrapperProps {
@@ -63,12 +70,12 @@ function Header() {
   return (
     <HeaderWrapper>
       <LogoWrapper />
-      <h1 style={{ color: "#fff", fontSize: "48px" }}>
+      <div style={logoStyles}>
         t<span style={{ color: "#bcd4bd" }}>ai</span>lor
-      </h1>
+      </div>
       <ExploreButton />
       <Input className="w-1/2 rounded-full" placeholder="Search..."></Input>
-      <div className="ml-auto mr-4">Sign Out</div>
+      <div className="ml-auto mr-4 font-bold">Sign Out</div>
     </HeaderWrapper>
   );
 }

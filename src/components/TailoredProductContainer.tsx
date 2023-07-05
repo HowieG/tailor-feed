@@ -1,23 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Masonry from "@mui/lab/Masonry";
-import { styled } from "@mui/material/styles";
 import type { TailoredProduct } from "~/types/TailorTypes";
 import { stringToDescriptionTokenArray } from "~/utils";
 import { testDescriptionTokens } from "~/data/test-data";
 import DescriptionComponent from "./DescriptionComponent";
-
-const Label = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(0.5),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-  borderBottomLeftRadius: 0,
-  borderBottomRightRadius: 0,
-}));
 
 const imageStyles = {
   display: "flex",

@@ -1,6 +1,12 @@
-import Masonry from "@mui/lab/Masonry";
 import React from "react";
 import type { DescriptionToken } from "~/types/TailorTypes";
+
+const tokenTextStyles = {
+  fontFamily: "Ysabeau SC, sans-serif",
+  fontWeight: "500",
+  fontSize: "12px",
+  textAlign: "center" as const,
+};
 
 export default function DescriptionComponent({
   descriptionTokens,
@@ -12,7 +18,8 @@ export default function DescriptionComponent({
       {descriptionTokens.map((descriptionToken, index) => (
         <div
           key={index}
-          className="rounded-[8px] bg-white p-0 py-0.5 text-center text-[10px] font-semibold shadow-md shadow-neutral-500"
+          className="rounded-[8px] bg-white py-1 shadow-md shadow-neutral-500"
+          style={tokenTextStyles}
         >
           {descriptionToken.token}
         </div>
