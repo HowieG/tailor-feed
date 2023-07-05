@@ -2,8 +2,6 @@ import type {
   TailoredProduct,
   ReferenceProduct,
   TailorResult,
-  Product,
-  DescriptionToken,
 } from "~/types/TailorTypes";
 
 const stripedCouches: TailoredProduct[] = [
