@@ -1,5 +1,6 @@
 import React from "react";
 import type { DescriptionToken } from "~/types/TailorTypes";
+import { mapSentimentToColor } from "~/utils";
 
 const tokenTextStyles = {
   fontFamily: "Ysabeau SC, sans-serif",
@@ -19,7 +20,12 @@ export default function DescriptionComponent({
         <div
           key={index}
           className="rounded-[8px] bg-white py-1 shadow-md shadow-neutral-500"
-          style={tokenTextStyles}
+          style={{
+            ...tokenTextStyles,
+            backgroundColor: mapSentimentToColor(
+              descriptionToken.sentiment ? descriptionToken.sentiment : 0
+            ),
+          }}
         >
           {descriptionToken.token}
         </div>
