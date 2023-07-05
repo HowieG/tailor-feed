@@ -234,14 +234,40 @@ const referenceProduct2: ReferenceProduct = {
   product: {
     imgUrl:
       "https://i.pinimg.com/originals/ca/fd/3c/cafd3c29f246f07f5985217636a8f8a0.png",
+    description: [
+      { token: "light brown", sentiment: 0 },
+      { token: "medium back", sentiment: 0 },
+      { token: "round", sentiment: 0 },
+      { token: "sofa", sentiment: 1 },
+      { token: "striped back", sentiment: 1 },
+      { token: "carpet", sentiment: -1 },
+      { token: "fluffy", sentiment: 0 },
+      { token: "abstract", sentiment: 0 },
+      { token: "tactile", sentiment: 1 },
+      { token: "oblong", sentiment: 0 },
+    ],
   },
+  feedback: "low back and smoother",
 };
 
 const referenceProduct3: ReferenceProduct = {
   product: {
     imgUrl:
       "https://i.pinimg.com/originals/e0/5e/a7/e05ea72296215a1e91a753b5bd271262.jpg",
+    description: [
+      { token: "cream", sentiment: 0 },
+      { token: "low back", sentiment: 1 },
+      { token: "bubbles", sentiment: 1 },
+      { token: "spheres", sentiment: 1 },
+      { token: "sofa", sentiment: 1 },
+      { token: "geometric", sentiment: 0 },
+      { token: "fluffy", sentiment: 0 },
+      { token: "shapes", sentiment: 0 },
+      { token: "sections", sentiment: 0 },
+      { token: "low armrests", sentiment: 1 },
+    ],
   },
+  feedback: "playful, more bubbles",
 };
 
 export const testProducts: TailorResult[] = [

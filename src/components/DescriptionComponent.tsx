@@ -19,7 +19,7 @@ export default function DescriptionComponent({
       {descriptionTokens.map((descriptionToken, index) => (
         <div
           key={index}
-          className="rounded-[8px] bg-white py-1 shadow-md shadow-neutral-500"
+          className="flex items-center justify-center rounded-[8px] bg-white py-1 shadow-md shadow-neutral-500"
           style={{
             ...tokenTextStyles,
             backgroundColor: mapSentimentToColor(
