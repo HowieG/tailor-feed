@@ -5,7 +5,7 @@ import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const headerWrapperStyles = {
-  position: "sticky" as ConstrainULongRange,
+  position: "sticky" as const,
   top: 0,
   zIndex: 999,
   display: "flex",
