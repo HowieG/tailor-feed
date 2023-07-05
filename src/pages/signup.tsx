@@ -56,7 +56,7 @@ export default function Home() {
             </div>
           </div>
           <Link
-            href="https://www.loom.com/share/28b11f8d809443f18988dc497481521f"
+            href="https://www.loom.com/share/cf72ee681b5d4b1481385cc425f2cdf7?sid=da5c30c2-a971-4a2e-a515-5178a705ac9d"
             className="relative flex justify-center gap-4"
           >
             <Image
