@@ -34,14 +34,16 @@ const TailoredResultContainer = ({ data }: { data: TailorResult }) => {
 const ReferenceProductContainer = ({ data }: { data: ReferenceProduct }) => {
   return (
     <div className="ml-4 flex h-full w-1/5 flex-col">
-      <SourceProductContainer data={data} />
+      <SourceProductContainer referenceProduct={data} />
     </div>
   );
 };
 const TailoredResults = ({ data }: { data: TailoredProduct[] }) => {
   return (
     <div className="flex h-full w-4/5 flex-col justify-center">
-      <TailoredProductContainer data={data}></TailoredProductContainer>
+      <TailoredProductContainer
+        tailoredProducts={data}
+      ></TailoredProductContainer>
     </div>
   );
 };

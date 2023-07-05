@@ -20,8 +20,10 @@ type TailoredProduct = {
 
 type DescriptionToken = {
   token: string;
-  sentiment?: boolean; // like = 1, dislike = 0, neutral = undefined
+  sentiment?: SentimentRangeType; // like = 1, dislike = 0, neutral = undefined
 };
+
+type SentimentRangeType = -1 | -0.75 | -0.5 | -0.25 | 0 | 0.25 | 0.5 | 0.75 | 1;
 
 export type {
   TailorResult,
@@ -29,4 +31,5 @@ export type {
   ReferenceProduct,
   TailoredProduct,
   DescriptionToken,
+  SentimentRangeType,
 };

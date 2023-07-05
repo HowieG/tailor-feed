@@ -53,6 +53,7 @@ module.exports = {
         tailorTan: {
           100: "rgb(245, 235, 223)",
           200: "rgb(232, 216, 195)",
+          300: "#D4BFA6",
         },
       },
       borderRadius: {

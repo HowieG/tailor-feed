@@ -16,19 +16,19 @@ const imageStyles = {
 };
 
 export default function SourceProductContainer({
-  data,
+  referenceProduct,
 }: {
-  data: ReferenceProduct;
+  referenceProduct: ReferenceProduct;
 }) {
   return (
     <Box className="rounded-2xl bg-tailorTan-200 px-3 py-2 shadow-2xl">
       <a
-        href={data.product.sourceUrl}
+        href={referenceProduct.product.sourceUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
         <Image
-          src={data.product.imgUrl}
+          src={referenceProduct.product.imgUrl}
           alt="Tailored Result"
           loading="lazy"
           style={imageStyles}
@@ -39,8 +39,16 @@ export default function SourceProductContainer({
         />
       </a>
       <DescriptionComponent
-        descriptionTokens={stringToDescriptionTokenArray(testDescriptionTokens)}
+        descriptionTokens={
+          referenceProduct.product.description
+            ? referenceProduct.product.description
+            : stringToDescriptionTokenArray(testDescriptionTokens) // TODO: Remove once description non-optional
+        }
       />
+      <div className="mt-2 rounded-xl border-2 border-tailorTan-300 p-2 text-gray-600">
+        {referenceProduct.feedback}
+      </div>{" "}
+      {/* TODO: Turn feedback into a component?  */}
     </Box>
   );
 }

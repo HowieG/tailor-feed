@@ -19,7 +19,7 @@ const headerWrapperStyles = {
 };
 
 const logoStyles = {
-  color: "#D4BFA6",
+  color: "#D4BFA6", // TODO: use tailorTan-300
   fontSize: "64px",
   fontFamily: "Ysabeau SC, sans-serif",
   fontWeight: "700",

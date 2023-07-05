@@ -23,9 +23,9 @@ const imageStyles = {
 };
 
 export default function TailoredProductContainer({
-  data,
+  tailoredProducts,
 }: {
-  data: TailoredProduct[];
+  tailoredProducts: TailoredProduct[];
 }) {
   const [expanded, setExpanded] = React.useState<string | boolean>(true);
 
@@ -49,7 +49,7 @@ export default function TailoredProductContainer({
   return (
     <Box>
       <Masonry columns={4} spacing={2}>
-        {data.map((item, index) => (
+        {tailoredProducts.map((tailoredProducts, index) => (
           <div key={index}>
             <Accordion
               defaultExpanded={true}
@@ -64,7 +64,7 @@ export default function TailoredProductContainer({
                 id={`panel${index + 1}d-header`}
               >
                 <Image
-                  src={item.product.imgUrl}
+                  src={tailoredProducts.product.imgUrl}
                   alt="Alt Text"
                   loading="lazy"
                   style={imageStyles}
@@ -74,16 +74,20 @@ export default function TailoredProductContainer({
                   className="h-auto w-full"
                   onClick={() =>
                     handleImageClick(
-                      item.product.sourceUrl ? item.product.sourceUrl : "/"
+                      tailoredProducts.product.sourceUrl
+                        ? tailoredProducts.product.sourceUrl
+                        : "/"
                     )
                   }
                 />
               </AccordionSummary>
               <AccordionDetails>
                 <DescriptionComponent
-                  descriptionTokens={stringToDescriptionTokenArray(
-                    testDescriptionTokens
-                  )}
+                  descriptionTokens={
+                    tailoredProducts.product.description
+                      ? tailoredProducts.product.description
+                      : stringToDescriptionTokenArray(testDescriptionTokens) // TODO: Remove once description non-optional
+                  }
                 />
               </AccordionDetails>
             </Accordion>
