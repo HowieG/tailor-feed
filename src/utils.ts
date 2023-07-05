@@ -1,4 +1,4 @@
-import { DescriptionToken } from "~/types/TailorTypes";
+import type { DescriptionToken } from "~/types/TailorTypes";
 
 function stringToDescriptionTokenArray(description: string) {
   const descriptionTokens: DescriptionToken[] = [];
