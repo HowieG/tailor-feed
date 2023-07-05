@@ -1,12 +1,15 @@
 import React, { type ReactNode } from "react";
 import Image from "next/image";
 import { Input } from "~/components/ui/input";
+import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const headerWrapperStyles = {
   display: "flex",
-  gap: "6px",
+  justifyContent: "space-between",
+  gap: "32px",
   alignItems: "center",
-  padding: "0 32px",
+  padding: "0 12px",
   backgroundColor: "#e8d8c3",
   color: "#fff",
 };
@@ -32,13 +35,18 @@ const HeaderWrapper: React.FC<HeaderWrapperProps> = ({ children }) => {
 
 const LogoWrapper = () => {
   return (
-    <div style={{ display: "flex" }}>
-      <Image
-        src="/img/tailor-logo.png"
-        alt="Tailor Logo"
-        width={48}
-        height={48}
-      />
+    <div className="mx-6 flex items-center">
+      <div>
+        <Image
+          src="/img/tailor-logo.png"
+          alt="Tailor Logo"
+          width={48}
+          height={48}
+        />
+      </div>
+      <div style={logoStyles}>
+        t<span style={{ color: "#bcd4bd" }}>ai</span>lor
+      </div>
     </div>
   );
 };
@@ -48,13 +56,12 @@ const ExploreButton = () => {
     <button
       style={{
         display: "flex",
-        height: "40px",
-        padding: "0 12px",
+        padding: "12px",
         margin: "0 12px",
         border: "none",
         borderRadius: "24px",
         backgroundColor: "#fff",
-        color: "#000",
+        color: "#888",
         fontSize: "14px",
         fontWeight: "bold",
         cursor: "pointer",
@@ -69,13 +76,17 @@ const ExploreButton = () => {
 function Header() {
   return (
     <HeaderWrapper>
-      <LogoWrapper />
-      <div style={logoStyles}>
-        t<span style={{ color: "#bcd4bd" }}>ai</span>lor
+      <div className="flex h-full items-center">
+        <LogoWrapper />
+        <ExploreButton />
       </div>
-      <ExploreButton />
-      <Input className="w-1/2 rounded-full" placeholder="Search..."></Input>
-      <div className="ml-auto mr-4 font-bold">Sign Out</div>
+      <div className="flex-grow">
+        <Input className="w-3/4 rounded-full" placeholder="Search..."></Input>
+      </div>
+      <div className="flex h-full items-center">
+        <CircleNotificationsIcon style={{ fontSize: "48px" }} />
+        <AccountCircleIcon style={{ fontSize: "48px" }} />
+      </div>
     </HeaderWrapper>
   );
 }
