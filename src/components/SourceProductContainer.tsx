@@ -45,7 +45,7 @@ export default function SourceProductContainer({
             : stringToDescriptionTokenArray(testDescriptionTokens) // TODO: Remove once description non-optional
         }
       />
-      <div className="mt-2 rounded-xl border-2 border-tailorTan-300 p-2 text-lg text-gray-600">
+      <div className="mt-2 rounded-xl border-2 border-tailorTan-300 p-2 text-sm text-gray-600">
         {referenceProduct.feedback}
       </div>{" "}
       {/* TODO: Turn feedback into a component?  */}

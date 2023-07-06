@@ -65,7 +65,7 @@ const ExploreButton = () => {
         border: "none",
         borderRadius: "24px",
         backgroundColor: "#fff",
-        color: "#888",
+        color: "#000",
         fontSize: "14px",
         fontWeight: "bold",
         cursor: "pointer",

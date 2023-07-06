@@ -14,9 +14,15 @@ export default function DescriptionComponent({
 }: {
   descriptionTokens: DescriptionToken[];
 }) {
+  // Sort the descriptionTokens array by sentiment
+  const sortedTokens = [...descriptionTokens];
+
+  // Sort the prioritizedTokens array by sentiment in descending order
+  sortedTokens.sort((a, b) => (b.sentiment || 0) - (a.sentiment || 0));
+
   return (
     <div className="my-1 grid grid-cols-4 gap-1">
-      {descriptionTokens.map((descriptionToken, index) => (
+      {sortedTokens.map((descriptionToken, index) => (
         <div
           key={index}
           className="flex items-center justify-center rounded-[8px] bg-white py-1 shadow-md shadow-neutral-500"

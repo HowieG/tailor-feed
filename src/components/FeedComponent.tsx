@@ -21,7 +21,7 @@ const FeedComponent = ({ data }: { data: TailorResult[] }) => {
 
 const TailoredResultComponent = ({ data }: { data: TailorResult }) => {
   return (
-    <div className="mx-auto flex w-[96%] flex-row justify-center gap-12 rounded-2xl bg-white bg-opacity-60 px-4 py-6 shadow-2xl">
+    <div className="mx-auto flex w-[96%] flex-row justify-center gap-12 rounded-lg bg-white bg-opacity-60 px-4 py-6 shadow-2xl">
       <ReferenceProductComponent
         data={data.referenceProduct}
       ></ReferenceProductComponent>
