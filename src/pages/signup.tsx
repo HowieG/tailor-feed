@@ -19,7 +19,7 @@ const SignUpButton = () => {
         cursor: "pointer",
       }}
     >
-      Sign Up
+      Join Waitlist
     </button>
   );
 };
