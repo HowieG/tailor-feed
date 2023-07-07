@@ -7,12 +7,11 @@ interface MainContainerProps {
 }
 
 const MainContainer: React.FC<
-  MainContainerProps & { data: TailorResult[]; children?: React.ReactNode }
-> = ({ children, data }) => {
+  MainContainerProps & { children?: React.ReactNode }
+> = ({ children }) => {
   return (
     <div className="flex min-h-screen w-full flex-col bg-gradient-to-r from-white via-tailorTan-100 to-white pt-4">
       {children}
-      <FeedComponent data={data} />
     </div>
   );
 };

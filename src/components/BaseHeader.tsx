@@ -24,12 +24,13 @@ const logoStyles = {
 };
 
 interface HeaderWrapperProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 //TODO: Convert to Tailwind
 //TODO: Switch to grid
 
+// TODO: Make this a clickable link to Home
 const LogoWrapper = () => {
   return (
     <div className="flex items-center">

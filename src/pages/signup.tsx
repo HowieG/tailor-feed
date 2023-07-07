@@ -1,5 +1,6 @@
 import BaseHeader from "~/components/BaseHeader";
 import MainContainer from "~/components/MainContainer";
+import FeedComponent from "~/components/FeedComponent";
 import { demo } from "~/data/test-data";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,7 +31,7 @@ export default function Home() {
       <BaseHeader>
         <SignUpButton />
       </BaseHeader>
-      <MainContainer data={demo}>
+      <MainContainer>
         <div className="flex justify-center gap-4 pt-4">
           <div className="w-3/5 justify-end p-6 ">
             <div
@@ -74,6 +75,7 @@ export default function Home() {
             </button>
           </Link>
         </div>
+        <FeedComponent data={demo} />
       </MainContainer>
     </main>
   );
