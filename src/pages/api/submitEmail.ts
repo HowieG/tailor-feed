@@ -1,10 +1,16 @@
 import fetch from "node-fetch";
 import { env } from "src/env.mjs";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { z } from "zod";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {
-    const { email } = JSON.parse(req.body);
+    const { email } = JSON.parse(req.body as string) as { email: string };
+
+    if (!z.string().email().safeParse(email).success) {
+      res.status(400).json({ message: "Invalid email" });
+      return;
+    }
 
     const submitLink = async () => {
       try {
@@ -13,7 +19,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           {
             method: "POST",
             headers: {
-              Authorization: `Bearer ${env.AIRTABLE_API_KEY}`,
+              Authorization: `Bearer ${String(env.AIRTABLE_API_KEY)}`,
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
@@ -31,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           throw new Error("Failed to submit");
         }
         return { success: true };
-      } catch (err: any) {
+      } catch (err) {
         console.log(err);
         res.status(500).json({ error: err });
       }
@@ -43,7 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       })
       .catch((err) => {
         console.log(err);
-        res.status(500).json({ error: err });
+        res.status(500).json({ error: err as string });
       });
   }
 }

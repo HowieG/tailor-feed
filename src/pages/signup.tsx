@@ -7,21 +7,23 @@ import Link from "next/link";
 
 const SignUpButton = () => {
   return (
-    <button
-      style={{
-        display: "flex",
-        padding: "12px",
-        border: "none",
-        borderRadius: "24px",
-        backgroundColor: "#fff",
-        color: "#888",
-        fontSize: "14px",
-        fontWeight: "bold",
-        cursor: "pointer",
-      }}
-    >
-      Join Waitlist
-    </button>
+    <Link href="/waitlist">
+      <button
+        style={{
+          display: "flex",
+          padding: "12px",
+          border: "none",
+          borderRadius: "24px",
+          backgroundColor: "#fff",
+          color: "#888",
+          fontSize: "14px",
+          fontWeight: "bold",
+          cursor: "pointer",
+        }}
+      >
+        Join Waitlist
+      </button>
+    </Link>
   );
 };
 

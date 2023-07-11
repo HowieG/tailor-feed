@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import BaseHeader from "~/components/BaseHeader";
 import MainContainer from "~/components/MainContainer";
+import { set, z } from "zod";
 
 const Waitlist: NextPage = () => {
   return (
     <>
       <Head>
-        <title>ACME</title>
-        <meta name="description" content="Airtable powered waitlist template" />
+        <title>Tailor</title>
+        <meta name="description" content="Tailor Waitlist" />
         <link rel="icon" href="img/tailor-logo.png" />
       </Head>
       <Hero />
@@ -105,15 +105,10 @@ const EmailCapture = () => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
 
-  const handleSubmit = async (e: React.SyntheticEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    const target = e.target as typeof e.target & {
-      email: { value: string };
-    };
+  const handleSubmitAsync = async (emailValue: string) => {
     const res = await fetch("/api/submitEmail", {
       method: "POST",
-      body: JSON.stringify({ email: target.email.value }),
+      body: JSON.stringify({ email: emailValue }),
     });
     if (res.ok) {
       setIsSuccess(true);
@@ -121,6 +116,26 @@ const EmailCapture = () => {
       setIsError(true);
     }
     setIsLoading(false);
+  };
+
+  const handleSubmit = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    setIsError(false);
+    setIsSuccess(false);
+    setIsLoading(true);
+    const target = e.target as typeof e.target & {
+      email: { value: string };
+    };
+    const email = target.email.value;
+
+    if (z.string().email().safeParse(email).success) {
+      handleSubmitAsync(email).catch((error) => {
+        console.error("Error submitting email:", error);
+      });
+    } else {
+      setIsError(true);
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -177,7 +192,7 @@ const EmailCapture = () => {
       {isSuccess && <div className="mt-4 text-green-500">Joined waitlist!</div>}
       {isError && (
         <div className="mt-4 text-red-500">
-          Error joining waitlist. Please try again.
+          Error joining waitlist. Please check email then try again.
         </div>
       )}
     </form>

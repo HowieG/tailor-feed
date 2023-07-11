@@ -1,5 +1,6 @@
 import React, { type ReactNode } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const headerWrapperStyles = {
   position: "sticky" as const,
@@ -27,25 +28,24 @@ interface HeaderWrapperProps {
   children?: ReactNode;
 }
 
-//TODO: Convert to Tailwind
-//TODO: Switch to grid
-
-// TODO: Make this a clickable link to Home
+// TODO: Update from /signup to /. / is not routing to /signup on its own
 const LogoWrapper = () => {
   return (
-    <div className="flex items-center">
-      <div>
-        <Image
-          src="/img/tailor-logo.png"
-          alt="Tailor Logo"
-          width={48}
-          height={48}
-        />
+    <Link href="/signup">
+      <div className="flex items-center">
+        <div>
+          <Image
+            src="/img/tailor-logo.png"
+            alt="Tailor Logo"
+            width={48}
+            height={48}
+          />
+        </div>
+        <div style={logoStyles}>
+          t<span style={{ color: "#bcd4bd" }}>ai</span>lor
+        </div>
       </div>
-      <div style={logoStyles}>
-        t<span style={{ color: "#bcd4bd" }}>ai</span>lor
-      </div>
-    </div>
+    </Link>
   );
 };
 
