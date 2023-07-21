@@ -34,10 +34,10 @@ export default function Home() {
         <SignUpButton />
       </BaseHeader>
       <MainContainer>
-        <div className="flex justify-center gap-4 pt-4">
-          <div className="w-3/5 justify-end p-6 ">
+        <div className="flex flex-col justify-center gap-4 md:pt-4 lg:flex-row">
+          <div className="flex w-full flex-col justify-end px-4 py-4 md:p-6 lg:w-3/5">
             <div
-              className="p-4 text-4xl text-white"
+              className="text-center text-3xl text-white md:p-4 md:text-left md:text-4xl"
               style={{
                 fontFamily: "Ysabeau SC, sans-serif",
                 textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
@@ -46,7 +46,7 @@ export default function Home() {
               AI does your online shopping for you
             </div>
             <div
-              className=" p-4 text-2xl text-tailorTan-300"
+              className="pt-4 text-justify text-sm text-tailorTan-300 md:p-4 md:text-left md:text-2xl"
               style={{
                 textShadow: "0px 0.5px 0.5px rgba(0, 0, 0, 0.5)",
               }}

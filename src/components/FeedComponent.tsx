@@ -21,7 +21,7 @@ const FeedComponent = ({ data }: { data: TailorResult[] }) => {
 
 const TailoredResultComponent = ({ data }: { data: TailorResult }) => {
   return (
-    <div className="mx-auto flex w-[96%] flex-row justify-center gap-12 rounded-lg bg-white bg-opacity-60 px-4 py-6 shadow-2xl">
+    <div className="mx-auto flex w-full flex-col justify-center gap-12 rounded-lg bg-white bg-opacity-60 px-4 py-6 shadow-2xl md:w-[96%] md:flex-row">
       <ReferenceProductComponent
         data={data.referenceProduct}
       ></ReferenceProductComponent>
@@ -32,14 +32,14 @@ const TailoredResultComponent = ({ data }: { data: TailorResult }) => {
 
 const ReferenceProductComponent = ({ data }: { data: ReferenceProduct }) => {
   return (
-    <div className="ml-4 flex h-full w-1/5 flex-col">
+    <div className="flex h-full w-full flex-col md:w-2/5 lg:w-1/5">
       <SourceProductContainer referenceProduct={data} />
     </div>
   );
 };
 const TailoredResults = ({ data }: { data: TailoredProduct[] }) => {
   return (
-    <div className="flex h-full w-4/5 flex-col justify-center">
+    <div className="flex h-full w-full flex-col justify-center md:w-4/5">
       <TailoredProductContainer
         tailoredProducts={data}
       ></TailoredProductContainer>

@@ -50,7 +50,7 @@ export default function TailoredProductContainer({
 
   return (
     <Box>
-      <Masonry columns={4} spacing={2}>
+      <Masonry columns={{ xs: 1, sm: 2, md: 2, lg: 4 }} spacing={2}>
         {tailoredProducts.map((tailoredProducts, index) => (
           <div key={index}>
             <Accordion
