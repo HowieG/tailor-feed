@@ -10,18 +10,18 @@ const headerWrapperStyles = {
   justifyContent: "space-between",
   gap: "36px",
   alignItems: "center",
-  padding: "0 32px",
-  backgroundColor: "#e8d8c3",
+  padding: "0 2vw",
+  backgroundColor: "#f5e3ce",
   color: "#fff",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
 };
 
 const logoStyles = {
   color: "#D4BFA6", // TODO: use tailorTan-300
-  fontSize: "64px",
+  fontSize: "calc(2vw + 24px)",
   fontFamily: "Ysabeau SC, sans-serif",
   fontWeight: "700",
-  margin: "-16px 0 0 0",
+  margin: "-calc(10vw) 0 0 0",
 };
 
 interface HeaderWrapperProps {
@@ -37,8 +37,8 @@ const LogoWrapper = () => {
           <Image
             src="/img/tailor-logo.png"
             alt="Tailor Logo"
-            width={48}
-            height={48}
+            width={36}
+            height={36}
           />
         </div>
         <div style={logoStyles}>

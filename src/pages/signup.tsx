@@ -11,12 +11,12 @@ const SignUpButton = () => {
       <button
         style={{
           display: "flex",
-          padding: "12px",
+          padding: "calc(0.5vw + 6px)",
           border: "none",
           borderRadius: "24px",
           backgroundColor: "#fff",
-          color: "#888",
-          fontSize: "14px",
+          color: "#D4BFA6",
+          fontSize: "calc(0.5vw + 12px)",
           fontWeight: "bold",
           cursor: "pointer",
         }}

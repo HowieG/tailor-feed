@@ -10,7 +10,7 @@ const MainContainer: React.FC<
   MainContainerProps & { children?: React.ReactNode }
 > = ({ children }) => {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-gradient-to-r from-white via-tailorTan-100 to-white md:pt-4">
+    <div className="flex min-h-screen w-full flex-col bg-tailorTan-100 bg-gradient-to-r md:pt-4">
       {children}
     </div>
   );
