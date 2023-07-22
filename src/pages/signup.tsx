@@ -46,7 +46,7 @@ export default function Home() {
               AI does your online shopping for you
             </div>
             <div
-              className="pt-4 text-justify text-sm text-tailorTan-300 md:p-4 md:text-left md:text-2xl"
+              className="pt-4 text-justify text-xl text-tailorTan-300 md:p-4 md:text-left md:text-2xl"
               style={{
                 textShadow: "0px 0.5px 0.5px rgba(0, 0, 0, 0.5)",
               }}
