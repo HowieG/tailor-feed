@@ -4,6 +4,12 @@ import FeedComponent from "~/components/FeedComponent";
 import { demo } from "~/data/test-data";
 import Image from "next/image";
 import Link from "next/link";
+import Hotjar from "@hotjar/browser";
+
+const siteId = 3825264;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
 
 const SignUpButton = () => {
   return (
